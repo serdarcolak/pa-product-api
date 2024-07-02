@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PSVKQ2xjPdarhkwzraArc7NsFokiqg4ce17prviSw44=",
+  "Source": "pa-product-api",
+  "BasePath": "_content/pa-product-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
