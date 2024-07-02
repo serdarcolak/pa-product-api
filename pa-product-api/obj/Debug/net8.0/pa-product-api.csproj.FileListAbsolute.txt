@@ -451,3 +451,4 @@ C:\Users\serdar.colak\RiderProjects\pa-product-api\pa-product-api\obj\Debug\net8
 C:\Users\serdar.colak\RiderProjects\pa-product-api\pa-product-api\obj\Debug\net8.0\pa-product-api.pdb
 C:\Users\serdar.colak\RiderProjects\pa-product-api\pa-product-api\obj\Debug\net8.0\pa-product-api.genruntimeconfig.cache
 C:\Users\serdar.colak\RiderProjects\pa-product-api\pa-product-api\obj\Debug\net8.0\ref\pa-product-api.dll
+C:\Users\serdar.colak\RiderProjects\pa-product-api\pa-product-api\obj\Debug\net8.0\pa-product-api.sourcelink.json

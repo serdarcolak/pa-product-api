@@ -52,7 +52,7 @@ public class AccountController : ControllerBase
         return Ok(AccountList);
     }
     
-    //Account güncelleme işlemi
+    //Account güncelleme işlemi.
     [HttpPut]
     public IActionResult Put(int id, Account account)
     {
@@ -67,10 +67,12 @@ public class AccountController : ControllerBase
             return NotFound();
         }
 
-        accountResult.FirstName = account.FirstName;
-        accountResult.LastName = account.LastName;
-        accountResult.AccountBalance = account.AccountBalance;
 
+        accountResult.FirstName = account.FirstName != default ? account.FirstName : accountResult.FirstName;
+        accountResult.LastName = account.LastName != default ? account.LastName : accountResult.LastName;
+        accountResult.AccountBalance =
+            account.AccountBalance != default ? account.AccountBalance : accountResult.AccountBalance;
+        
         return Ok(accountResult); 
     }
     
