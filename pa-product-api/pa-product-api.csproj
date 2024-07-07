@@ -10,7 +10,6 @@
     
     <ItemGroup>
         <ProjectReference Include="..pa-product-api\pa-product-api-data.csproj" />
-        <ProjectReference Include="..\Para.Data\Para.Data.csproj" />
     </ItemGroup>
     
     
