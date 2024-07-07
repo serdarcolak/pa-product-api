@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "FluentValidation/11.9.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -2104,6 +2117,31 @@
     }
   },
   "libraries": {
+    "FluentValidation/11.9.2": {
+      "sha512": "XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+      "type": "package",
+      "path": "fluentvalidation/11.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.9.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
     "Humanizer/2.14.1": {
       "sha512": "/FUTD3cEceAAmJSCPN9+J+VhGwmL/C12jvwlyM1DFXShEMsBzvLzLqSrJ2rb+k/W2znKw7JyflZgZpyE+tI7lA==",
       "type": "package",
@@ -6133,6 +6171,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj",
+      "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj",
+      "FluentValidation >= 11.9.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -6169,7 +6210,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj": {
+              "projectPath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj"
+            },
+            "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj": {
+              "projectPath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6182,6 +6230,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.9.2, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.6, )"
@@ -6217,5 +6269,25 @@
         "runtimeIdentifierGraphPath": "C:\\Users\\serdar.colak\\.dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -1,4 +1,6 @@
 using Microsoft.OpenApi.Models;
+using pa_product_api.Services;
+using pa_product_api.Extensions;
 
 namespace pa_product_api
 {
@@ -14,11 +16,14 @@ namespace pa_product_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "pa-product-api API", Version = "v1" });
             });
+            
+            //Oluşturulan fake servisin eklenmesi
+            //services.AddScoped<IAccountService, FakeAccountService>();
+            services.AddSingleton<IAccountService, FakeAccountService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,7 +41,18 @@ namespace pa_product_api
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
-
+            
+            app.Use(async (context, next) =>
+            {
+                Console.WriteLine("Action Girildi....");
+                await next.Invoke();
+                Console.WriteLine("Action çıktı...");
+            });
+            
+            app.UseLoggingMiddleware();
+            
+            
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using pa_product_api.Model;
+using pa_product_api.Services;
 
 namespace pa_product_api.Controllers;
 
@@ -7,94 +8,89 @@ namespace pa_product_api.Controllers;
 [ApiController]
 public class AccountController : ControllerBase
 {   
-    //Sahte data
-    private static List<Account> AccountList = new List<Account>
+    //service
+    private readonly IAccountService accountService;
+    
+    
+    public AccountController(IAccountService accountService)
     {
-        new Account{Id = 1, FirstName = "SERDAR",LastName = "ÇOLAK", AccountBalance = 500},
-        new Account{Id = 2, FirstName = "TEST",LastName = "TEST", AccountBalance = 200},
-        new Account{Id = 3, FirstName = "TEST1",LastName = "TEST1", AccountBalance = 100},
-        new Account{Id = 4, FirstName = "AYŞE",LastName = "YILMAZ", AccountBalance = 800},
-        new Account{Id = 5, FirstName = "AHMET",LastName = "ÇOLAK", AccountBalance = 600}
-    };
+        this.accountService = accountService;
+    }
     
     //Tüm Account verilerini çekme
     [HttpGet]
-    public IActionResult Get()
+    public IActionResult GetAccounts()
     {
-        return Ok(AccountList);
+        var accounts = accountService.GetAllAccounts();
+        return Ok(accounts);
     }
     
     //Account id'ye göre veriyi çekme
     [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    public IActionResult GetAccount(int id)
     {
-        var accounts = AccountList.FirstOrDefault(p => p.Id == id);
+        var account = accountService.GetAccountById(id);
 
-        if (accounts == null)
+        if (account == null)
         {
             return NotFound();
         }
         
-        return Ok(accounts);
+        return Ok(account);
     }
     
     //FromBody ile yeni bir Account oluşturma
     [HttpPost]
-    public IActionResult Post([FromBody]Account account)
+    public IActionResult CreateAccount([FromBody]Account account)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
-        
-        account.Id = AccountList.Count + 1;
-        AccountList.Add(account);
-        return Ok(AccountList);
+        //Modele DatabaseGenerated eklendi.
+        //account.Id = AccountList.Count + 1;
+        accountService.AddAccount(account);
+        return CreatedAtAction(nameof(GetAccount), new { id = account.Id }, account);
     }
     
     //Account güncelleme işlemi.
     [HttpPut]
-    public IActionResult Put(int id, Account account)
+    public IActionResult UpdateAccount(int id, Account account)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        var accountResult = AccountList.FirstOrDefault(p => p.Id == id);
+        var accountResult = accountService.GetAccountById(id);
         if (accountResult == null)
         {
             return NotFound();
         }
-
-
-        accountResult.FirstName = account.FirstName != default ? account.FirstName : accountResult.FirstName;
-        accountResult.LastName = account.LastName != default ? account.LastName : accountResult.LastName;
-        accountResult.AccountBalance =
-            account.AccountBalance != default ? account.AccountBalance : accountResult.AccountBalance;
+        accountService.UpdateAccount(accountResult);
+        return Ok(accountResult);
         
-        return Ok(accountResult); 
     }
     
     //FromQuery ile route verilmeden delete işlemi yapılmaktadır.
     [HttpDelete]
-    public IActionResult Delete([FromQuery] string id)
+    public IActionResult DeleteAccount([FromQuery] string id)
     {
-        var accountResult = AccountList.FirstOrDefault(p => p.Id == Convert.ToInt32(id));
+        var accountResult = accountService.GetAccountById(Convert.ToInt32(id));
         if (accountResult == null)
         {
             return NotFound();
         }
-
-        AccountList.Remove(accountResult);
+        
+        accountService.DeleteAccount(Convert.ToInt32(id));
         return NoContent();
     }
     
     //FirstName ve LastName göre listeleme işlemi
     [HttpGet("list")]
-    public IActionResult List(string firstName = null, string lastName = null)
+    public IActionResult ListAccounts(string firstName = null, string lastName = null)
     {
-        IQueryable<Account> query = AccountList.AsQueryable();
+        IQueryable<Account> query = accountService.GetAllAccounts().AsQueryable();
 
         if (!string.IsNullOrEmpty(firstName))
         {
@@ -120,9 +116,9 @@ public class AccountController : ControllerBase
     
     //Alanlara göre sıralama işlemi
     [HttpGet("list/sort")]
-    public IActionResult ListSorted(string sortBy = "firstname", bool descending = false)
+    public IActionResult ListAccountsSorted(string sortBy = "firstname", bool descending = false)
     {
-        IQueryable<Account> query = AccountList.AsQueryable();
+        IQueryable<Account> query = accountService.GetAllAccounts().AsQueryable();
 
         switch (sortBy.ToLower())
         {

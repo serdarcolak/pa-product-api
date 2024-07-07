@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "E3CqXkPAHND+n0N11QvAdo8py64OBjUq5xl7/2s8vNElxCgdBIEkfSkd7K3TDsUYYsFi+5wTT7+8tiNx5esPmg==",
-  "success": true,
+  "dgSpecHash": "X2RaYvLdCuCFChqwyc2zq94nLop6CqqMmKM22Nryp+WjpqzKap7APyrNlBD+Z6u3N9w2ItSdVgEeCBWw/wk7tg==",
+  "success": false,
   "projectFilePath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\pa-product-api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\serdar.colak\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\serdar.colak\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\serdar.colak\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\serdar.colak\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -128,5 +129,24 @@
     "C:\\Users\\serdar.colak\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\serdar.colak\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
