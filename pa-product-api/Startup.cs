@@ -21,9 +21,10 @@ namespace pa_product_api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "pa-product-api API", Version = "v1" });
             });
             
-            //Oluşturulan fake servisin eklenmesi
+            //Oluşturulan fake servislerin eklenmesi
             //services.AddScoped<IAccountService, FakeAccountService>();
             services.AddSingleton<IAccountService, FakeAccountService>();
+            services.AddSingleton<IUserService, FakeUserService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

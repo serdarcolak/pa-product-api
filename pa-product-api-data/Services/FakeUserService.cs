@@ -4,14 +4,22 @@ namespace pa_product_api.Services;
 
 public class FakeUserService : IUserService
 {
-    private readonly List<User> _users = new List<User>
-    {
-        new User { Username = "user1", Password = "password1" },
-        new User { Username = "user2", Password = "password2" }
-    };
+    private readonly List<User> _users = new List<User>();
 
-    public bool ValidateUser(string username, string password)
+    public User Authenticate(string username, string password)
     {
-        return _users.Any(u => u.Username == username && u.Password == password);
+        return _users.SingleOrDefault(x => x.Username == username && x.Password == password);
+    }
+
+    public User Register(User user)
+    {
+        user.Id = _users.Count + 1;
+        _users.Add(user);
+        return user;
+    }
+
+    public User GetUserById(int id)
+    {
+        return _users.SingleOrDefault(x => x.Id == id);
     }
 }
