@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pa-product-api", "pa-product-api\pa-product-api.csproj", "{F6747F89-ED58-4EB1-A33D-A8B81FDCF16F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pa-product-api-data", "pa-product-api-data\pa-product-api-data.csproj", "{30A94FB9-A16E-4E18-A918-2C7579230E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pa-product-api-base", "pa-product-api-base\pa-product-api-base.csproj", "{CBE45DFD-0060-4C67-9F4C-BCB13ED94DCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{F6747F89-ED58-4EB1-A33D-A8B81FDCF16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6747F89-ED58-4EB1-A33D-A8B81FDCF16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6747F89-ED58-4EB1-A33D-A8B81FDCF16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A94FB9-A16E-4E18-A918-2C7579230E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A94FB9-A16E-4E18-A918-2C7579230E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A94FB9-A16E-4E18-A918-2C7579230E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A94FB9-A16E-4E18-A918-2C7579230E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE45DFD-0060-4C67-9F4C-BCB13ED94DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE45DFD-0060-4C67-9F4C-BCB13ED94DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE45DFD-0060-4C67-9F4C-BCB13ED94DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE45DFD-0060-4C67-9F4C-BCB13ED94DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

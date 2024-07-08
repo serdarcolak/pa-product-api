@@ -2113,6 +2113,22 @@
             "rid": "win"
           }
         }
+      },
+      "pa-product-api-data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "Microsoft.AspNetCore.OpenApi": "8.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/pa-product-api-data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/pa-product-api-data.dll": {}
+        }
       }
     }
   },
@@ -6167,16 +6183,20 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "pa-product-api-data/1.0.0": {
+      "type": "project",
+      "path": "../pa-product-api-data/pa-product-api-data.csproj",
+      "msbuildProject": "../pa-product-api-data/pa-product-api-data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj",
-      "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj",
       "FluentValidation >= 11.9.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "pa-product-api-data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6211,11 +6231,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj": {
-              "projectPath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj"
-            },
-            "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj": {
-              "projectPath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj"
+            "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api-data\\pa-product-api-data.csproj": {
+              "projectPath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api-data\\pa-product-api-data.csproj"
             }
           }
         }
@@ -6269,25 +6286,5 @@
         "runtimeIdentifierGraphPath": "C:\\Users\\serdar.colak\\.dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

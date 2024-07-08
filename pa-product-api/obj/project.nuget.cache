@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "X2RaYvLdCuCFChqwyc2zq94nLop6CqqMmKM22Nryp+WjpqzKap7APyrNlBD+Z6u3N9w2ItSdVgEeCBWw/wk7tg==",
-  "success": false,
+  "dgSpecHash": "SGBhppUzwTMybAr9r1LC8N+Vjb99QLU0EloklJiUg7lOrDokbmrbR3VjLBBaIvyfMh89MB+LZ1wDDs7MX4NK+Q==",
+  "success": true,
   "projectFilePath": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\pa-product-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serdar.colak\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
@@ -129,24 +129,5 @@
     "C:\\Users\\serdar.colak\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\serdar.colak\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\pa-product-api\\..pa-product-api\\pa-product-api-data.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\serdar.colak\\RiderProjects\\pa-product-api\\Para.Data\\Para.Data.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

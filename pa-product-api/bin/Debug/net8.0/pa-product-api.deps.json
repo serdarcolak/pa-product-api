@@ -11,7 +11,8 @@
           "FluentValidation": "11.9.2",
           "Microsoft.AspNetCore.OpenApi": "8.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "pa-product-api-data": "1.0.0"
         },
         "runtime": {
           "pa-product-api.dll": {}
@@ -1541,6 +1542,17 @@
             "fileVersion": "7.0.22.51805"
           }
         }
+      },
+      "pa-product-api-data/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "Microsoft.AspNetCore.OpenApi": "8.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "runtime": {
+          "pa-product-api-data.dll": {}
+        }
       }
     }
   },
@@ -2417,6 +2429,11 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "pa-product-api-data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
